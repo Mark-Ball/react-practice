@@ -12,12 +12,21 @@ const WarningText = styled.p`
     margin: 0;
 `;
 
+const WarningSpace = styled.div`
+
+	height: 26px;
+`;
+
 class Warning extends Component {
     render() {
+        const { text } = this.props;
+
         return (
-            <WarningText>
-                3 jobs were not displayed due to privacy settings
-            </WarningText>
+            <WarningSpace>
+                <WarningText>
+                    {text}
+                </WarningText>
+            </WarningSpace>
         )
     }
 }
