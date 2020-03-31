@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { UserContext } from '../../context/userContext';
 
 class Title extends Component {
+    static contextType = UserContext;
+
     render() {
         const { name } = this.context;
 
@@ -10,6 +12,5 @@ class Title extends Component {
         )
     }
 }
-Title.contextType = UserContext;
 
 export default Title;
