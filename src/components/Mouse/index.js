@@ -8,12 +8,11 @@ export default function Mouse(props) {
     function handleMouseMove(event) {
         setX(event.clientX);
         setY(event.clientY);
-        console.log(x, y);
     }
     
     return (
         <div style={{ height: '100vh' }} onMouseMove={handleMouseMove}>
-            {props.render(x, y)}
+            {props.render({ x: x, y: y })}
         </div>
     )
 }
